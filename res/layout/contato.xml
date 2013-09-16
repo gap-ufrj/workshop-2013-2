@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<!--
+    Cabeçalho padrão e declaração de um RelativeLayout
+    O RelativeLayout é um layout que posiciona seus View de maneira relativa, de acordo com
+    a posição de um outro View. A utilização de IDs é essencial para a organização desse
+    tipo de layout
+-->
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_contato" android:layout_alignParentLeft="true" android:layout_marginLeft="15dp"
+            android:layout_alignParentTop="true" android:layout_marginTop="15dp"
+            android:src="@drawable/icon"/>
+    <!--
+        Declaração de um ImageView
+        O atributo "android:layout_width" com valor "wrap_content" diz que a largura desse View
+        ocupará o espaço que for necessário para exibir seu conteúdo
+        O atributo "android:layout_height" com valor "wrap_content" diz que a altura desse View
+        ocupará o espaço que for necessário para exibir seu conteúdo
+        O atributo "android:id" informa a ID desse ImageView
+        Os atributos "android:layout_alignParentLeft" e "android:layout_alignParentTop" indicam seu
+        posicionamento relativo à tela do dispositivo
+        O atributo "android:src" indica qual será a imagem exibida pelo ImageView
+    -->
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fulano"
+            android:id="@+id/tv_nome"
+            android:layout_alignTop="@+id/img_contato" android:layout_toRightOf="@+id/img_contato"
+            android:textSize="22sp" android:textStyle="normal" android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123456789"
+            android:id="@+id/tv_telefone"
+            android:layout_below="@+id/img_contato"
+            android:layout_marginTop="40dp" android:textSize="22sp"
+            android:layout_alignLeft="@+id/img_contato" android:paddingTop="20dp"/>
+    <!--
+       Declaração de um TextView
+       O atributo "android:layout_width" com valor "wrap_content" diz que a largura desse View
+       ocupará o espaço que for necessário para exibir seu conteúdo
+       O atributo "android:layout_height" com valor "wrap_content" diz que a altura desse View
+       ocupará o espaço que for necessário para exibir seu conteúdo
+       O atributo "android:id" informa a ID desse TextView
+       Os atributos "android:layout_alignLeft" e "android:layout_below" indicam seu posicionamento
+       relativo ao View de ID "img_contato"
+       O atributo "android:textSize" define o tamanho, medido em sp, do texto exibido pelo TextView
+    -->
+
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ib_ligar"
+            android:src="@android:drawable/ic_menu_call"
+            android:layout_marginLeft="22dp"
+            android:layout_alignTop="@+id/tv_telefone"
+            android:layout_toLeftOf="@+id/ib_email"
+            />
+    <!--
+       Declaração de um ImageButton
+       O atributo "android:layout_width" com valor "wrap_content" diz que a largura desse View
+       ocupará o espaço que for necessário para exibir seu conteúdo
+       O atributo "android:layout_height" com valor "wrap_content" diz que a altura desse View
+       ocupará o espaço que for necessário para exibir seu conteúdo
+       O atributo "android:id" informa a ID desse Button
+       O atributo "android:src" indica qual será a imagem exibida pelo ImageButton
+       O atributo "android:layout_alignTop" indica seu posicionamento relativo ao View de ID "tv_telefone"
+       O atributo "android:layout_toLeftOf" indica seu posicionamento relativo ao View de ID "ib_email"
+    -->
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ib_sms"
+            android:layout_alignTop="@+id/tv_telefone"
+            android:src="@android:drawable/ic_menu_send" android:layout_alignBottom="@+id/ib_ligar"
+            android:layout_alignParentRight="true"
+            />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="teste@gmail.com"
+            android:id="@+id/tv_email"
+            android:textSize="22sp" android:singleLine="false" android:layout_alignLeft="@+id/img_contato"
+            android:layout_below="@+id/ib_ligar" android:layout_marginTop="40dp" android:paddingTop="20dp"/>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ib_email"
+            android:src="@android:drawable/ic_menu_send"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_email"/>
+
+</RelativeLayout>
+<!-- Fim da declaração do RelativeLayout -->

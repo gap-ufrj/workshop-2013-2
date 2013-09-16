@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.workshop">
+<!--
+    Cabeçalho padrão e declaração do manifest e
+    indicação do package que contém os códigos Java do aplicativo
+-->
+
+    <uses-sdk android:minSdkVersion="7"/>
+    <!--
+        Definição das versões do Android em que o aplicativo pode ser instalado
+        Nesse caso, a versão mínima é a API 7 (Android 2.1)
+    -->
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    <!-- Declaração da permissão "android.permission.SEND_SMS", necessária para enviar uma SMS -->
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    <!-- Declaração da permissão "android.permission.CALL_PHONE", necessária para fazer uma ligação -->
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+    <!--
+        Declaração do aplicativo
+        Definição do ícone e do nome do aplicativo
+    -->
+
+        <activity android:name=".ContatoActivity"></activity>
+        <!-- Declaração da Activity ContatoActivity -->
+
+        <activity android:name=".ListContatosActivity" android:theme="@style/Theme.AppCompat">
+        <!--
+            Declaração da Activity ListContatosActivity
+
+            Definição do tema "@style/Theme.AppCompat" para a ListContatosActivity
+            Essa definição é necessária para que uma Activity que herda ActionBarActivity funcione no
+            modo de compatibilidade
+        -->
+
+            <intent-filter>
+            <!-- Declaração dos Intent que a Activity ListContatosActivity pode responder -->
+                <action android:name="android.intent.action.MAIN" />
+                <!--
+                    Declaração de uma action
+					Uma action é um atributo obrigatório em um intent-filter
+					A action MAIN indica que a ListContatosActivity pode ser executada como a
+					Activity inicial do aplicativo
+                -->
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!--
+					Declaração de uma categoria
+					A categoria LAUNCHER indica que a ListContatosActivity pode ser executada a partir
+					do menu de aplicativos do Android
+                -->
+            </intent-filter>
+            <!--
+                Na prática, esse bloco de código faz com que uma Activity seja a principal,
+                a que é inicializada com o aplicativo na sua execução
+            -->
+
+        </activity>
+        <!-- Fim da declaração da Activity ListContatosActivity -->
+
+        <activity android:name=".EditContatoActivity"></activity>
+        <!-- Declaração da Activity EditContatoActivity -->
+
+    </application>
+    <!-- Fim da declaração do aplicativo -->
+</manifest>
+<!-- Fim da declaração do manifest -->

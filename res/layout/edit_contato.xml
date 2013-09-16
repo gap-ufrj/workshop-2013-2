@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<!--
+    Cabeçalho padrão e declaração de um RelativeLayout
+    O RelativeLayout é um layout que posiciona seus View de maneira relativa, de acordo com
+    a posição de um outro View. A utilização de IDs é essencial para a organização desse
+    tipo de layout
+-->
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_editContato" android:layout_alignParentLeft="true" android:layout_marginLeft="15dp"
+            android:layout_alignParentTop="true" android:layout_marginTop="15dp"
+            android:src="@drawable/icon"/>
+    <!--
+        Declaração de um ImageView
+        O atributo "android:layout_width" com valor "wrap_content" diz que a largura desse View
+        ocupará o espaço que for necessário para exibir seu conteúdo
+        O atributo "android:layout_height" com valor "wrap_content" diz que a altura desse View
+        ocupará o espaço que for necessário para exibir seu conteúdo
+        O atributo "android:id" informa a ID desse ImageView
+        Os atributos "android:layout_alignParentLeft" e "android:layout_alignParentTop" indicam seu
+        posicionamento relativo à tela do dispositivo
+        O atributo "android:src" indica qual será a imagem exibida pelo ImageView
+    -->
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_nome"
+            android:layout_alignLeft="@+id/img_editContato"
+            android:layout_below="@+id/img_editContato"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:hint="Nome"
+            android:inputType="textPersonName"/>
+    <!--
+        Declaração de um EditText
+        O atributo "android:layout_width" com valor "fill_parent" diz que a largura desse View
+        ocupará todo espaço disponível no layout em que se encontra
+        O atributo "android:layout_height" com valor "wrap_content" diz que a altura desse View
+        ocupará o espaço que for necessário para exibir seu conteúdo
+        O atributo "android:id" informa a ID desse EditText
+        Os atributos "android:layout_alignLeft" e "android:layout_below" indicam seu posicionamento
+        relativo ao View de ID "img_editContato"
+        O atributo "android:hint" exibe um texto indicativo do que é esperado por esse EditText
+        O atributo "android:inputType" indica o tipo de texto que pode ser escrito nesse EditText
+        A ausência do atributo "android:text" significa que o EditText não possuirá um texto pré-definido
+    -->
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_telefone"
+            android:layout_alignLeft="@+id/img_editContato"
+            android:layout_below="@+id/edit_nome"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:inputType="phone"
+            android:hint="Telefone"/>
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_email"
+            android:layout_alignLeft="@+id/img_editContato"
+            android:layout_below="@+id/edit_telefone"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:singleLine="false"
+            android:hint="Email"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar"
+            android:id="@+id/btn_salvar"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/edit_email"
+            android:layout_marginTop="20dp"/>
+    <!--
+        Declaração de um Button
+        O atributo "android:layout_width" com valor "wrap_content" diz que a largura desse View
+        ocupará o espaço que for necessário para exibir seu conteúdo
+        O atributo "android:layout_height" com valor "wrap_content" diz que a altura desse View
+        ocupará o espaço que for necessário para exibir seu conteúdo
+        O atributo "android:id" informa a ID desse Button
+        O atributo "android:layout_centerHorizontal" com valor "true" indica que o Button
+        está centralizado horizontalmente
+        O atributo "android:layout_below" indica seu posicionamento relativo ao View de ID "edit_email"
+    -->
+
+</RelativeLayout>
+<!-- Fim da declaração do RelativeLayout -->

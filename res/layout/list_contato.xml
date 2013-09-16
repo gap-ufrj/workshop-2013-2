@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<!--
+    Cabeçalho padrão e declaração de um LinearLayout
+    O LinearLayout é um layout que posiciona seus View de maneira simples, dependendo da
+    sua orientação. Caso sua orientação seja vertical, posicionará um embaixo do outro.
+    Se for horizontal, um ao lado do outro.
+-->
+
+    <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:layout_gravity="center"/>
+    <!--
+        Declaração de um ListView
+        O atributo "android:layout_width" com valor "fill_parent" diz que a largura dessa lista
+        ocupará todo espaço disponível no layout em que se encontra
+        O atributo "android:layout_height" com valor "wrap_content" diz que a altura dessa lista
+        ocupará o espaço que for necessário para exibir seu conteúdo
+        O atributo "android:id" informa a ID desse ListView
+        O atributo "android:layout_gravity" informa que esse ListView está centralizado
+    -->
+
+</LinearLayout>
+<!-- Fim da declaração do LinearLayout -->

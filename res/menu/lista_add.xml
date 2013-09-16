@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:workshop="http://schemas.android.com/apk/res-auto" >
+    <!--
+        Cabeçalho padrão e declaração do menu de opções
+
+        A criação de um outro namespace, workshop, é necessária para utilização do módulo
+        de compatibilidade para exibir uma Action Bar em versões anteriores à Honeycomb
+        (API 11, Android 3.0). Como as versões mais antigas não possuem o atributo "android:showAsAction",
+        utilizado para definir em que ocasiões um botão é exibido na Action Bar, devemos criar um namespace
+        para passar esse atributo para o módulo de compatibilidade.
+    -->
+
+    <item android:title="Adicionar"
+          android:id="@+id/menu_add_contato"
+          android:icon="@android:drawable/ic_menu_add"
+          workshop:showAsAction="ifRoom"
+          ></item>
+    <!--
+       Declaração de um item
+       Definição do seu título, id, ícone e visibilidade na Action Bar
+    -->
+
+</menu>
+<!-- Fim da declaração do menu de opções -->
