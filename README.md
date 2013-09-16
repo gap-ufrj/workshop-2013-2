@@ -1,7 +1,7 @@
 Código do aplicativo do Workshop 2013.2 do GAP
 ===============
 
-Esse projeto utiliza Action Bar
+Esse projeto utiliza Action Bar.
 
 Como a Action Bar foi implementada na versão Honeycomb (API 11, Android 3.0), para utilizá-la em versões
 anteriores é necessário utilizar as bibliotecas de compatibilidade, que podem ser obtidas através do SDK
