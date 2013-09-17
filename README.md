@@ -19,7 +19,7 @@ Library > Java, apontando para a biblioteca importada anteriormente.
 
 Caso não consiga importar o módulo de compatibilidade, faça as seguintes alterações:
 
-1) Em ListContatosActivity, remova o import de android.support.v7.app.ActionBarActivity e faça com que a classe
+1) Na ListContatosActivity, remova o import de android.support.v7.app.ActionBarActivity e faça com que a classe
 herde Activity em vez de ActionBarActivity.
 
 2) No AndroidManifest.xml, remova o android:theme="@style/Theme.AppCompat" definido para a Activity ListContatosActivity.
